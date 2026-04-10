@@ -1,0 +1,92 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<form method="post" class="form-product">
+    {% csrf_token %}
+    <!-- Section ACTIVIDADES A EJECUTAR -->
+    <section>
+        <h1>ACTIVIDADES A EJECUTAR</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th rowspan="2">Operación</th>
+                    <th colspan="5">Reporte Tiempos Reales</th>
+                </tr>
+                <tr>
+                    <th>Hora Inicio</th>
+                    <th>Hora Final</th>
+                    <th># Personas</th>
+                    <th>HH</th>
+                    <th>Responsable</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for op in operaciones %}
+                <tr>
+                    <td>{{ op.nombre }}</td>
+    
+                    <td><input type="time" name="hora_inicio_{{ forloop.counter }}"></td>
+                    <td><input type="time" name="hora_fin_{{ forloop.counter }}"></td>
+                    <td><input type="number" name="personas_{{ forloop.counter }}"></td>
+                    <td><input type="number" step="0.01" name="hh_{{ forloop.counter }}"></td>
+                    <td><input type="text" name="responsable_{{ forloop.counter }}"></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <!-- Section MATERIALES A UTILIZAR -->
+    <section>
+        <h1>MATERIALES A UTILIZAR</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>Denominación</th>
+                    <th>Cantidad Necesaria</th>
+                    <th>Unidad</th>
+                    <th>Cant. Batch/Parada</th>
+                    <th>Lote</th>
+                    <th>Observaciones</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for op in filas %}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="number" ></td>
+                    {% if forloop.first %}
+                    <td rowspan="10">
+                        <textarea name="observaciones" style="height:100%; width:100%;"></textarea>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="7">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+                            <div style="text-align:center; border-right: solid 1px;">Entregado</div>
+                            <div style="text-align:center;">Recibido</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">2</td>
+                    <td colspan="3">2</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- Section MOVIMIENTO DE PLANTA -->
+
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}

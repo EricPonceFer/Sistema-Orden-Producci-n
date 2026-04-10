@@ -240,7 +240,7 @@ body.dark-theme .theme-toggle-track .theme-toggle-indicator {
     display:flex;
 }
 
-.container .main-content{
+main{
     flex:1;
     padding: 30px;
     color: var(--color-text-primary);

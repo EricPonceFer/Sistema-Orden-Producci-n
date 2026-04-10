@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Sidebar</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body class="dark-theme">
+        <!-- Site Navbar -->
+        <nav class="site-nav">
+            <button class="sidebar-toggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+        <div class="container">
+            {% include 'sideBar.html' %}
+            <main>
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+        <script src="{% static 'js/sidebar.js' %}"></script>
+    </body>
+</html>
