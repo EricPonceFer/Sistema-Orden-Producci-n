@@ -86,6 +86,34 @@
     </section>
 
     <!-- Section MOVIMIENTO DE PLANTA -->
+     <section>
+        <h1>MOVIMIENTO DE PLANTA</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>MOVIMIENTOS</th>
+                    <th>CÓDIGO SAP</th>
+                    <th>DESCRIPCIÓN</th>
+                    <th>KG</th>
+                    <th>NRO. DE LOTE</th>
+                    <th>#ORDEN</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                {% for op in movimiento_planta %}
+                <tr>
+                    <td>{{ op.movimiento }}</td>
+                    <td><input type="text" ></td>
+                    <td><input type="text" ></td>
+                    <td><input type="number"></td>
+                    <td><input type="text" ></td>
+                    <td><input type="text   " ></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+     </section>
 
     <button type="submit">Guardar</button>
 </form>

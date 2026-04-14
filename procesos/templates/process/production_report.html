@@ -1,0 +1,405 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<form method="post" class="form-product">
+    {% csrf_token %}
+    <!-- Section ENCABEZADO -->
+    <section>
+        <div>
+            <p>RIFS-001-03</p><span>REPORTE DE PRODUCCIÓN DIARIA</span>
+        </div>
+        <div>
+            <div class="formulario">
+                <div>
+                    <label>Fecha Empaque:</label>
+                    <input type="date" name="packing_date">
+                </div>
+
+                <div>
+                    <label>Línea:</label>
+                    <input type="text" name="machine">
+                </div>
+
+                <div>
+                    <label>Lote:</label>
+                    <input type="date" name="batch">
+                </div>
+
+                <div>
+                    <label>Turno:</label>
+                    <input type="time" name="shift">
+                </div>
+
+                <div>
+                    <label>Cantidad Programada:</label>
+                    <input type="number" name="scheduled_quantity">
+                </div>
+
+                <div>
+                    <label>Tiempo Estimado:</label>
+                    <input type="time" name="estimated_time">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Orden Producción:</label>
+                    <input type="text" name="production_order">
+                </div>
+
+                <div>
+                    <label>Producto:</label>
+                    <input type="text" name="product">
+                </div>
+
+                <div>
+                    <label>Presentación:</label>
+                    <input type="text" name="presentation">
+                </div>
+
+                <div>
+                    <label>Sabor:</label>
+                    <input type="text" name="flavor">
+                </div>
+
+                <div>
+                    <label>Cantidad Producida:</label>
+                    <input type="number" name="quantity_produced">
+                </div>
+
+                <div>
+                    <label>Tiempo Real de Proceso:</label>
+                    <input type="time" name="real_process_time">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Section PROCESO DE LIEMPIEZA Y DESINFECCIÓN DE MAQUINARIA Y UTENSILIOS -->
+    <section>
+        <h1>PROCESO DE LIMPIEZA Y DESINFECCIÓN DE MAQUINARIA Y UTENSILIOS</h1>
+        <!--Module ASEO NORMAL INICIAL-->
+        <div>
+            <h2>ASEO NORMAL INICIAL</h2>
+            <div>
+                <div>
+                    <label>Operario:</label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>Fecha:</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>Hora Inicio:</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>Hora Final:</label>
+                    <input type="text" name="product">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>1. Retire el Polvo:</label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>2. Desinfecte la máquina</label>
+                    <input type="text" name="product">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Desinfectante Utilizado: </label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>Concentración: </label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>Tiempo de acción: </label>
+                    <input type="text" name="product">
+                </div>
+            </div>
+        </div>
+        <!--Module ASEO GENERAL FINAL-->
+        <div>
+            <h2>ASEO GENERAL FINAL</h2>
+            <div>
+                <div>
+                    <label>Operario:</label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>Fecha:</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>Hora Inicio:</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>Hora Final:</label>
+                    <input type="text" name="product">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>1. Retire el Polvo:</label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>2. Desarme las piezas desmontables</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>3. Lave las piezas desmontables</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>4. Lave la estructura de la máquina</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>5. Seque las piezas y la máquina</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>6. Desinfecte (Rociar el desinfectante)</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>7. Arme la máquina</label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>8. Cambie los filtros</label>
+                    <input type="text" name="product">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Desinfectante Utilizado: </label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>Concentración: </label>
+                    <input type="text" name="product">
+                </div>
+                <div>
+                    <label>Tiempo de acción: </label>
+                    <input type="text" name="product">
+                </div>
+            </div>
+        </div>
+        <!--Module ASEO UTENSILIOS-->
+        <div>
+            <h2>ASEO UTENSILIOS</h2>
+            <div>
+                <div>
+                    <label>Limpie los utensilios: </label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>Desinfecte los utensilios: </label>
+                    <input type="text" name="product">
+                </div>
+            </div>
+            <div>
+                <label>Supervisor: </label>
+                <input type="text" name="product">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section CONTROL PROCESO DE EMPAQUE Y EMBALAJE -->
+     <section>
+        <h1>CONTROL PROCESO DE EMPAQUE Y EMBALAJE</h1>
+        <!--Module CONTROL MATERIAL EMPAQUE-->
+        <div>
+            <h2>CONTROL MATERIAL EMPAQUE</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Descripción</th>
+                        <th>Unidad</th>
+                        <th>Recibido</th>
+                        <th>Producido</th>
+                        <th>Tara</th>
+                        <th>Desperdicio</th>
+                        <th>Defectuoso</th>
+                        <th>Devuelto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for op in control_material %}
+                    <tr>
+                        <td>{{ op.material }}</td>
+                        <td>{{ op.unidad }}</td>
+                        <td><input type="number" ></td>
+                        <td><input type="number" ></td>
+                        <td><input type="number" ></td>
+                        <td><input type="number" ></td>
+                        <td><input type="number" ></td>
+                        <td><input type="number" ></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!--Module CONTROL PERSONAL EMPAQUE-->
+        <div>
+            <h2>CONTROL PERSONAL EMPAQUE</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>No. Personas</th>
+                        <th>H. Inicial</th>
+                        <th>H. Final</th>
+                        <th>No. Personas</th>
+                        <th>H. Inicial</th>
+                        <th>H. Final</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" ></td>
+                        <td><input type="time" ></td>
+                        <td><input type="time" ></td>
+                        <td><input type="text" ></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+     </section>
+
+     <!-- Section INFORME FINAL -->
+     <section>
+        <h1>INFORME FINAL</h1>
+        <div>
+            <div>
+                <label>1. Tiempo Total (minutos) (Horas turno x 60):</label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>2. Tiempo Total Paros Planeados:</label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>3. Tiempo Disponible (1-2):</label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>4. Tiempo Total Paros No Planeados: </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>5. Tiempo de Operación (3-4): </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>6. Producció Real (Unidades buenas + malas): </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>7. Velocidad Teórica (unidades/minuto): </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>8. Producción Teórica (5x7): </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>9. Producción Rechazada (unidades): </label>
+                <input type="text" name="production_order">
+            </div>
+            
+        </div>
+        <div>
+            <div>
+                <label>10. Kilos empaque solicitados (Estandar BPCS):</label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>11. Kilos empaque utilizado: </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>12. Kilos empaque dañado:</label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>13. Kilos empaque utilizados real (11-12): </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>14. % Perdida Material Empaque ((11/10) x 100) - 100</label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>15. Índice de Disponibilidad (5/3) x 100: </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>16. Índice de Producción (6/8) x 100: </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>17. Índice de Calidad ((6-9)/6) x 100: </label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <label>18. E.T.E (15x16x17): </label>
+                <input type="text" name="production_order">
+            </div>
+        </div>
+     </section>
+
+     <!-- Section DISPOSICIÓN CONTROL DE CALIDAD -->
+     <section>
+        <h1>DISPOSICIÓN CONTROL DE CALIDAD</h1>
+        <!--Module Estado Producto-->
+        <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>APROBADO</th>
+                        <th colspan="2">RETENIDO</th>
+                        <th>RECHAZADO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>R. <input type="text" ></td>
+                        <td>L. <input type="text" ></td>
+                        <td><input type="text" ></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <label>Analista Responsable:</label>
+                <input type="text" name="production_order">
+            </div>
+        <div>
+            <div>
+                <label>OBSERVACIONES:</label>
+                <input type="text" name="production_order">
+            </div>
+            <div>
+                <div>
+                    <label>Responsable Empaque: </label>
+                    <input type="text" name="production_order">
+                </div>
+                <div>
+                    <label>Supervisor: </label>
+                    <input type="text" name="production_order">
+                </div>
+            </div>
+     </section>
+
+    <button type="submit">Guardar</button>
+</form>
+{% endblock %}
