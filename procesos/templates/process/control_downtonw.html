@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<!-- Section CODIGO DE PAROS-->
+<section>
+    <h1>CODIGO DE PAROS</h1>
+    <div>
+        <!--Module Paros Programados-->
+        <div>
+            <h2>Paros Programados</h2>
+            <table border="1">
+                {% for i in range(6) %}
+                <tr>
+                    <td>{{ codigos.i }}</td>
+                    <td>{{ codigos.i|add:6 }}</td>
+                    <td>{{ codigos.i|add:12 }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <!--Module Paros No Programados-->
+        <div>
+            <h2>Paros No Programados</h2>
+            <table border="1">
+                {% for i in range(6) %}
+                <tr>
+                    <td>{{ codigos.i }}</td>
+                    <td>{{ codigos.i|add:6 }}</td>
+                    <td>{{ codigos.i|add:12 }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+<!-- Section REGISTRO DE PAROS-->
+<section>
+    <h1>REGISTRO DE PAROS</h1>
+    <div>
+        <!--Module Paros Programados-->
+        <div>
+            <label>HORA: </label>
+            <input type="text" name="production_order">
+        </div>
+        <div>
+            <label>CODIGO DE PARO: </label>
+            <input type="text" name="production_order">
+        </div>
+        <div>
+            <label>DURACIÓN (MINUTOS): </label>
+            <input type="text" name="production_order">
+        </div>
+    </div>
+    <span>TOTAL: </span>
+</section>
+{% endblock %}
